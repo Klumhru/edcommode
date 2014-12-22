@@ -12,6 +12,7 @@ from .models import (
     Economy,
     Allegiance,
     Wealth,
+    Government,
 )
 
 
@@ -24,6 +25,7 @@ class StationAdmin(admin.ModelAdmin):
 
 
 admin.site.register(System, admin.ModelAdmin)
+admin.site.register(Government, admin.ModelAdmin)
 admin.site.register(Station, StationAdmin)
 admin.site.register(Economy, admin.ModelAdmin)
 admin.site.register(Allegiance, admin.ModelAdmin)
