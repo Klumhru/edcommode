@@ -1,4 +1,4 @@
 edcommode
 =========
 
-Elite Dangerous Commodities Tracked
+Elite Dangerous Commodities Tracker
