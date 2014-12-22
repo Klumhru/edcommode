@@ -20,6 +20,7 @@ class Wealth(NameBase):
     class Meta:
         verbose_name_plural = 'Wealth'
 
+
 class Allegiance(NameBase):
     pass
 
@@ -48,7 +49,11 @@ class Station(NameBase):
 
     wealth = models.ForeignKey('system.Wealth')
     economy = models.ForeignKey('system.Economy')
+    system = models.ForeignKey('system.System')
 
     commodities = models.ManyToManyField(
         'product.Commodity',
         through='system.StationCommodity')
+
+    class Meta:
+        order_with_respect_to = 'system'
