@@ -25,10 +25,15 @@ class Allegiance(NameBase):
     pass
 
 
+class Government(NameBase):
+    pass
+
+
 class System(NameBase):
 
     allegiance = models.ForeignKey('system.Allegiance')
     economy = models.ForeignKey('system.Economy')
+    government = models.ForeignKey('system.Government')
 
 
 class StationCommodity(models.Model):
