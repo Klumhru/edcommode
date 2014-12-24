@@ -15,5 +15,8 @@ class Commodity(NameBase):
 
     galactic_average = models.PositiveIntegerField()
 
+    stations = models.ManyToManyField(
+        'system.Station', through='system.StationCommodity')
+
     class Meta:
         verbose_name_plural = 'Commodities'

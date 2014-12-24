@@ -10,12 +10,12 @@ from django.contrib import admin
 from .models import Commodity
 
 
-class StationInline(admin.TabularInline):
+class SystemInline(admin.TabularInline):
     model = Commodity.stations.through
 
 
 class CommodityAdmin(admin.ModelAdmin):
-    inlines = (StationInline,)
+    inlines = (SystemInline,)
 
 
 admin.site.register(Commodity, CommodityAdmin)
