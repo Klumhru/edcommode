@@ -58,7 +58,8 @@ class Station(NameBase):
 
     commodities = models.ManyToManyField(
         'product.Commodity',
-        through='system.StationCommodity')
+        through='system.StationCommodity',
+        related_name='stations')
 
     class Meta:
         order_with_respect_to = 'system'

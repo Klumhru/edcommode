@@ -9,4 +9,13 @@ from django.contrib import admin
 
 from .models import Commodity
 
-admin.site.register(Commodity, admin.ModelAdmin)
+
+class StationInline(admin.TabularInline):
+    model = Commodity.stations.through
+
+
+class CommodityAdmin(admin.ModelAdmin):
+    inlines = (StationInline,)
+
+
+admin.site.register(Commodity, CommodityAdmin)
